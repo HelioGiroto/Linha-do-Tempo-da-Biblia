@@ -3,6 +3,8 @@ Este repositório se refere a um estudo feito por Hélio Giroto comprovando a te
 
 Link da Planilha: http://tiny.cc/cronologia
 
+Veja o gráfico em HTML: https://heliogiroto.github.io/Linha-do-Tempo-da-Biblia/
+
 ![Linha do Tempo](https://raw.githubusercontent.com/HelioGiroto/Linha-do-Tempo-da-Biblia/master/Linha%20do%20Tempo%20-%20de%20Ad%C3%A3o%20a%20Cristo.jpg)
 
 OBS: Toda referência a este trabalho e pesquisa deve ser citado o nome do autor (Hélio Giroto) e a fonte (este link de origem).
