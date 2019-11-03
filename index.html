@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Helio Giroto">
+    <title>Linha do Time do AT</title>
+	<style>
+		body{
+			background: MintCream;
+		}
+
+		.areaGrafico {
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	</style>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+</head>
+
+<body>
+
+<center><h1>LINHA DO TEMPO DOS DESCENDENTES DE CRISTO</h1></center>
+
+<hr>
+
+<div class="areaGrafico">
+	<canvas id="barrasDuplas"></canvas>
+</div>
+
+<hr>
+
+<div id="tabela"></div>
+
+<a href="https://www.youtube.com/watch?v=jFEA_ycXSBE">FONTE: Hélio Giroto - Youtube</a>
+
+
+<br><br>
+<script>
+
+// GRÁFICO DE BARRAS HORIZONTAL SOBREPOSTAS:
+
+var ctx5 = document.getElementById("barrasDuplas").getContext("2d");
+
+var personagens = ["Adão", "Sete", "Enos", "Cainã", "Maalalel", "Jarede", "Enoque", "Matusalém", "Lameque", "Noé", "*Dilúvio", "Sem", "Arfaxade", "Salá", "Héber", "Pelegue", "Reú", "Serugue", "Naor", "Tera", "Abraão", "Isaque", "Jacó"];
+var anoNasc = [0,130,235,325,395,460,622,687,874,1056,1656,1558,1658,1693,1723,1757,1787,1819,1849,1878,1948,2048,2108];
+var anosVividos = [930,912,905,910,895,962,365,969,777,950,1,600,438,433,464,239,239,230,148,205,175,180,147];
+
+// CONSTRUIR UMA TABELA DAS 3 ARRAY ACIMA
+
+
+var myRadarChart = new Chart(ctx5, {
+	type: "horizontalBar",
+	data: {
+		labels: personagens,
+		datasets: [
+			{
+				label: "Ano de Nasc.",
+				data: anoNasc,
+				backgroundColor: "rgba(20, 99, 132, 0)"
+			},
+			{
+				label: "Anos vividos",
+				data: anosVividos,
+				backgroundColor: "rgba(20, 99, 12, 0.4)"
+			}
+		]
+	},
+	options: {
+		legend: { position: "bottom" },
+		scales: {
+			yAxes: [ {stacked: true} ],
+			xAxes: [ {stacked: true} ]
+		}
+	}
+});
+
+</script>
+</body>
+</html>
+
+
+
