@@ -17,7 +17,7 @@
 
 		table {
 		  font-family: arial, sans-serif;
-		  width: 34%;
+
 		}
 
 		td, th {
@@ -52,6 +52,7 @@
 	<th>PERSONAGEM</th>
 	<th>ANO NASC.</th>
 	<th>ANOS VIVIDOS</th>
+	<th>REFERÊNCIAS</th>
 </tr>
 
 </table>
@@ -66,7 +67,7 @@
 var personagens = ["Adão", "Sete", "Enos", "Cainã", "Maalalel", "Jarede", "Enoque", "Matusalém", "Lameque", "Noé", "*Dilúvio", "Sem", "Arfaxade", "Salá", "Héber", "Pelegue", "Reú", "Serugue", "Naor", "Tera", "Abraão", "Isaque", "Jacó"];
 var anoNasc = [0,130,235,325,395,460,622,687,874,1056,1656,1558,1658,1693,1723,1757,1787,1819,1849,1878,1948,2048,2108];
 var anosVividos = [930,912,905,910,895,962,365,969,777,950,1,600,438,433,464,239,239,230,148,205,175,180,147];
-
+var refs = ["Gn 5:3", "Gn 5:6", "Gn 5:9", "Gn 5:12", "Gn 5:15", "Gn 5:18", "Gn 5:21", "Gn 5:25", "Gn 5:28", "Gn 5:32 (* ver: 11:10) e 9:28-29", "Gn 7:6, 11 e 8:13", "Gn 11:10", "Gn 11:12", "Gn 11:14", "Gn 11:16", "Gn 11:18", "Gn 11:20", "Gn 11:22", "Gn 11:24", "Gn 11:26 e 32", "Gn 21:5 e 25:7", "Gn 25:26 e 35:28", "Gn 47:28"]
 
 // GRÁFICO DE BARRAS HORIZONTAL SOBREPOSTAS:
 
@@ -103,7 +104,7 @@ var myRadarChart = new Chart(ctx5, {
 // Ex.: https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
 tab = document.getElementById("tabela")
 for (i=0; i < personagens.length; i++) {
-	tab.innerHTML += `<tr><td>${personagens[i]}</td><td>${anoNasc[i]}</td><td>${anosVividos[i]}</td></tr>`
+	tab.innerHTML += `<tr><td>${personagens[i]}</td><td>${anoNasc[i]}</td><td>${anosVividos[i]}</td><td>${refs[i]}</td></tr>`
 }
 
 
